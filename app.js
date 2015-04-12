@@ -2,13 +2,13 @@ var express = require('express');
 var app = express();
 var config = require("./config");
 
-
+console.log("Running app.js");
 app.get('/', function (req, res) {
   res.send('Hello World!, I work!');
 });
 
-var server = require('http').createServer(app)
-console.log("Running app.js")
+var server = require('http').createServer(app);
+
 server.listen(config.port, function () {
 
   	var host = server.address().address;

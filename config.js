@@ -1,6 +1,7 @@
 var config;
 if(process.env.NODE_ENV === 'production') {
     //Production environment variables
+    console.log("in production");
     config = {
         "request_timeout":2200,
         "port":process.env.PORT,
