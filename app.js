@@ -2,19 +2,15 @@ var express = require('express');
 var app = express();
 var config = require("./config");
 
+app.set('port', process.env.PORT || 3000);
+
 console.log("Running app.js");
 app.get('/', function (req, res) {
   res.send('Hello World!, I work!');
 });
 
-var server = require('http').createServer(app);
-
-server.listen(config.port, function () {
-
-  	var host = server.address().address;
-  	var port = server.address().port;
-
-  	console.log('Sandbox running at %s:%s', host, port);
+app.listen(app.get('port'), function () {
+  	console.log('Sandbox running');
 });
 
 app.use(function(req, res, next) {
