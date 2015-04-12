@@ -1,0 +1,14 @@
+{
+  "name": "turnOver",
+  "version": "1.0.0",
+  "description": "Pgulley's sandbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "author": "pgulley",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
