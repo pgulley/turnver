@@ -8,11 +8,13 @@ app.get('/', function (req, res) {
 });
 
 var server = require('http').createServer(app)
+console.log("Running app.js")
 server.listen(config.port, function () {
 
-  var host = server.address().address;
-  var port = server.address().port;
+  	var host = server.address().address;
+  	var port = server.address().port;
 
-  console.log('Sandbox running at %s:%s', host, port);
-
+  	console.log('Sandbox running at %s:%s', host, port);
 });
+
+module.exports = app;
